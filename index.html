@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Classifier</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    background-image: linear-gradient(to right, rgb(243, 232, 163), rgb(217, 212, 246), rgb(243, 232, 163));
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.container {
+    width: 80%;
+    margin: 50px auto;
+    text-align: center;
+}
+
+h1 {
+    color: #000000;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 10%;
+    text-decoration: underline;
+}
+
+input[type="number"] {
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: rgb(98, 92, 137);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+button:hover {
+    background-color: #434444;
+    color: white;
+}
+
+p {
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+
+
+</style>
+
+</head>
+<body>
+    <div class="container">
+        <h1>Age Classifier</h1>
+        <label for="age">Enter your age:</label>
+        <input type="number" id="age" placeholder="Enter your age">
+        <button onclick="classifyAge()">Classify Age</button>
+        <p id="result"></p>
+    </div>
+
+
+    <script>
+        function classifyAge() {
+    var age = parseInt(document.getElementById('age').value);
+    var result = document.getElementById('result');
+    
+    if (isNaN(age) || age < 0) {
+        result.textContent = "Please enter a valid age.";
+    } else if (age < 13) {
+        result.textContent = "You are a child.";
+    } else if (age < 18) {
+        result.textContent = "You are a teenager.";
+    } else if (age < 65) {
+        result.textContent = "You are an adult.";
+    } else {
+        result.textContent = "You are a senior citizen.";
+    }
+}
+    </script>
+</body>
+</html>
