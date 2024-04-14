@@ -1,1 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<title>CEAT</title>
 
+<style>
+    body{
+        background-image: url(WhatsApbackground.jpg);
+        background-size: cover;
+    }
+
+    .logo{
+        margin: 0px;
+        margin-top: 50px;
+        padding: 0px;
+    }
+
+    img{
+        width: 300px;
+        height: auto;
+        position: relative;
+        left: 30% ;
+        margin: 100px;
+        margin-top: 0px;
+    }
+
+    .jumbotron{
+        margin: 0px;
+        padding: 0px;
+        margin-top: 0px;
+        background-color: transparent;
+        color: white;
+    }
+
+    input{
+        margin: 10px;
+        width: 50px;
+        height: 50px;
+        font-weight: bolder;
+    }
+
+    .EnterotpSection{
+        background-color: transparent;
+        width: 25%;
+        margin-left: 37%;
+        padding: 10px;
+    }
+
+    button{
+        background-color: rgb(244, 129, 15);
+        color: white;
+        width: 25%;
+        margin-left: 37%;
+        padding: 10px;
+    }
+
+
+    @media (max-width: 800px) {
+    .logo{
+      margin-left: 0px;
+    }
+  }
+
+
+</style>
+</head>
+<body>
+
+    <div class="logo"><img src="CEAT_Tyres_Ltd.png"></div>
+
+    <div class="jumbotron text-center" >
+        <h1 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Mobile Number Verification</h1>
+        <p style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">ENTER OTP</p> 
+    </div>
+
+    <div class="EnterotpSection">
+        <input type="text" id="EnterOtpNo1" oninput="otp1()" placeholder="__">
+        <input type="text" id="EnterOtpNo2" oninput="otp2()" placeholder="__">
+        <input type="text" id="EnterOtpNo3" oninput="otp3()" placeholder="__">
+        <input type="text" id="EnterOtpNo4" oninput="otp4()" placeholder="__">
+    </div>
+
+    <button type="button" id="submitButton" style="font-weight: bolder;">SUBMIT</button>
+
+<script>
+
+
+function otp1(){
+    let firstInput = document.getElementById('EnterOtpNo1');  
+    // console.log(firstInput);
+    let valueFirst = firstInput.value;
+    if (valueFirst.length > 1){
+        let finalVal= valueFirst.slice(-1);
+        console.log(finalVal);
+        firstInput.value = finalVal;
+
+        // valueFirst = finalVal;
+    }
+
+        outputInput = document.getElementById('EnterOtpNo2');
+           outputInput.focus();    
+    }
+
+    // function otp1(){
+    // let enteredValue =document.getElementById("EnterOtpNo1").value;
+    // if (enteredValue > 1){
+    //     let newValue =enteredValue.slice(-1);
+    //     console.log(newValue);
+    //     enteredValue = newValue;
+    // }
+    // outputInput = document.getElementById('EnterOtpNo2');
+    //        outputInput.focus();   
+
+    // }
+
+
+ function otp2(){
+    let firstInput = document.getElementById('EnterOtpNo2');  
+    // console.log(firstInput);
+    let valueFirst = firstInput.value;
+    if (valueFirst.length > 1){
+        let finalVal= valueFirst.slice(-1);
+        console.log(finalVal);
+        firstInput.value = finalVal;
+    }
+    outputInput = document.getElementById('EnterOtpNo3');
+    outputInput.focus();
+ };
+
+ function otp3(){
+    let firstInput = document.getElementById('EnterOtpNo3');  
+    // console.log(firstInput);
+    let valueFirst = firstInput.value;
+    if (valueFirst.length > 1){
+        let finalVal= valueFirst.slice(-1);
+        console.log(finalVal);
+        firstInput.value = finalVal;
+    }
+    outputInput = document.getElementById('EnterOtpNo4');
+    outputInput.focus();
+ };
+
+ function otp4(){
+    let firstInput = document.getElementById('EnterOtpNo4');  
+    // console.log(firstInput);
+    let valueFirst = firstInput.value;
+    if (valueFirst.length > 1){
+        let finalVal= valueFirst.slice(-1);
+        console.log(finalVal);
+        firstInput.value = finalVal;
+    }
+    outputInput = document.getElementById('submitButton');
+    outputInput.focus();
+ };
+ 
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+</body>
+</html>
